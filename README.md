@@ -133,6 +133,12 @@ The Redis connection settings are configured in `RedisConfig.java`. By default, 
    ```
 3. Check the application logs to see the message being received and processed.
 
+## 🔗 References
+
+- Redis Pub/Sub Docs
+- Spring Data Redis
+- Spring Boot Caching
+
 
 ## 📫 Contact
 
