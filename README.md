@@ -1,6 +1,37 @@
 # Spring Redis Pub/Sub Implementation
 
-This project demonstrates a simple implementation of the Publish-Subscribe (Pub/Sub) messaging pattern using Spring Boot and Redis. It provides a REST API to publish messages and automatically subscribes to a Redis channel to receive and process those messages.
+This repository demonstrates the **Publish-Subscribe (Pub/Sub) design pattern** implemented using **Spring Boot, Spring Cache, and Redis**.  
+It shows how Redis can be used as a lightweight messaging broker to decouple microservices or application components. It provides a REST API to publish messages and automatically subscribes to a Redis channel to receive and process those messages.
+
+---
+
+## 📂 Project Overview
+- **Frameworks & Tools:**
+  - Spring Boot
+  - Spring Data Redis
+  - Spring Cache
+  - Redis (In-memory datastore & message broker)
+
+- **Design Pattern:** **Publish–Subscribe (Pub/Sub)**  
+  - **Publisher:** Sends messages to a Redis channel.  
+  - **Subscriber:** Listens for messages on that channel and processes them.  
+
+---
+
+## 🚀 Implemented Feature
+
+### 1) Pub-Sub Design Pattern with Redis & Spring Cache
+- Redis is configured as the message broker.  
+- Spring Boot application publishes events (messages) to a Redis channel.  
+- Multiple subscribers listen to the same channel and react in real-time.  
+- **Spring Cache** with Redis is also leveraged for caching frequently accessed data, reducing DB load.
+
+**Flow:**
+1. A publisher sends a message → stored in Redis channel.  
+2. Redis broadcasts it to all subscribers listening to that channel.  
+3. Subscribers process the message asynchronously.  
+
+---
 
 ## 🚀 Features
 
